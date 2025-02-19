@@ -21,7 +21,7 @@ export default function TaxForm() {
     setError(null);
 
     try {
-      const response = await fetch("http://localhost:5000/api/tax/calculate", {
+      const response = await fetch("https://assignment2-back2.onrender.com/api/tax/calculate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
