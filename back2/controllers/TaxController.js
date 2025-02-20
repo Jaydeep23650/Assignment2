@@ -28,7 +28,7 @@ export const calculateTax = async (req, res) => {
       taxPayable,
     });
 
-    await newTaxRecord.save(); 
+    // await newTaxRecord.save(); 
 
     res.json({
       message: "Tax calculated and saved successfully!",
