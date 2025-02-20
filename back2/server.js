@@ -11,23 +11,23 @@ app.use(express.json());
 app.use(cors());
 
 
-const connectDB = async () => {
-  try {
-    await mongoose.connect("mongodb://localhost:27017/mydata",{
-      useNewUrlParser: true,
-      useUnifiedTopology: true
+// const connectDB = async () => {
+//   try {
+//     await mongoose.connect("mongodb://localhost:27017/mydata",{
+//       useNewUrlParser: true,
+//       useUnifiedTopology: true
     
-    });
-    console.log("wow , MongoDB Connected");
-  } catch (error) {
-    console.error("Bad, MongoDB Connection Error:", error);
-    process.exit(1); 
-  }
-};
+//     });
+//     console.log("wow , MongoDB Connected");
+//   } catch (error) {
+//     console.error("Bad, MongoDB Connection Error:", error);
+//     process.exit(1); 
+//   }
+// };
 
-connectDB();
+// connectDB();
 
 app.use("/api/tax", taxRoutes);
 
-const PORT = process.env.PORT || 5000;
+const PORT =  5000;
 app.listen(PORT, () => console.log(`Wow, Server is  running on port ${PORT}`));
